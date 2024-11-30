@@ -9,7 +9,7 @@ const App = () => {
     const API_KEY = "e2769e7d7d6c4057a2674410242007";
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=5&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=5&aqi=no&alerts=no`
       );
       if (!response.ok) throw new Error("City not found");
       const data = await response.json();
